@@ -224,7 +224,9 @@ controller.hears(['help'],
            '*Adding Water*\n' +
            'add _number_\n' + 'add _number_ ounces\n' + 'add _number_ ounces of water\n' + '\n\n' +
            '*Getting Daily Total*\n' +
-           'total\n' + 'show me todays water\n' + 'how much have i drank today\n' + 'how much water have i had today\n' + '\n\n'
+           'total\n' + 'show me todays water\n' + 'how much have i drank today\n' + 'how much water have i had today\n' + '\n\n' + 
+           '*Remove Water*\n' +
+           'reset\n' + '\n\n'
            );
     });
 
