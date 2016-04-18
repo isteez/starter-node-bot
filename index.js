@@ -198,6 +198,15 @@ controller.hears(['shutdown'],
         });
     });
 
+controller.hears(['reset'],
+    'direct_message,direct_mention,mention', function (bot, message) {
+            bot.reply(message, 'Got it. I\'ll reset the ounces of water for you.');
+            controller.storage.users.save({ id: message.user, water: 0 }, function (err) {
+                if (err) {
+                    bot.reply(message, 'Oops... something went wrong. I wasn\'t able to add ' + ounces + ' ounces.');
+                }
+            });
+    });
 
 controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your name'],
     'direct_message,direct_mention,mention', function (bot, message) {
